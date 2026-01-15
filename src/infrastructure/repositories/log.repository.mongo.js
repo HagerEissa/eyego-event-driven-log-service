@@ -1,20 +1,3 @@
-// const logModel = require("../database/log.model");
-
-// const save = async (log) => {
-//   return await logModel.create(log);
-// };
-
-// const getAll = async ({ page = 1, limit = 10, filter = {} }) => {
-//   const skip = (page - 1) * limit;
-//   return await logModel
-//     .find(filter)
-//     .sort({ timestamp: -1 })
-//     .skip(skip)
-//     .limit(limit);
-// };
-
-// module.exports = { save, getAll };
-
 const logModel = require("../database/log.model");
 
 const save = async (log) => {
