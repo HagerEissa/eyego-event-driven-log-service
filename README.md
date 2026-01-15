@@ -41,8 +41,7 @@ src/
 
 
 ### 1️⃣ Clone the repository
-bash
-git clone https://github.com/USERNAME/REPO_NAME.git
+git clone https://github.com/HagerEissa/eyego-event-driven-log-service.git
 cd eyego-event-driven-log-service
 
 ---
@@ -73,15 +72,27 @@ Request Body:
 ---
 
 Get Logs (Pagination & Filtering)
-GET /logs?page=1&limit=10&userId=123
+GET /logs?page=1&limit=10&userId=777
 
-[
-  {
-    "userId": "123",
-    "action": "login",
-    "timestamp": "2026-01-14T14:58:01.000Z"
-  }
-]
+{
+    "data": [
+        {
+            "_id": "69684ba78b2c3535cabc1152",
+            "userId": "777",
+            "action": "sign up",
+            "timestamp": "2026-01-15T02:06:31.397Z",
+            "__v": 0
+        }
+    ],
+    "pagination": {
+        "page": 1,
+        "limit": 10,
+        "totalItems": 1,
+        "totalPages": 1,
+        "hasNextPage": false,
+        "hasPrevPage": false
+    }
+}
 
 
 ## Pagination & Filtering
@@ -99,3 +110,9 @@ Topic name: user-logs
 Producer publishes user activity logs
 
 Consumer processes logs asynchronously and stores them in MongoDB
+
+### Docker
+
+The project includes a Dockerfile for the Node.js service.
+
+docker-compose.yml orchestrates Kafka, MongoDB, and the backend service.
