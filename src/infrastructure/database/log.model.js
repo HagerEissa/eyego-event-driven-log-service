@@ -6,7 +6,6 @@ const logSchema = new mongoose.Schema({
   timestamp: { type: Date, default: Date.now },
 });
 
-// Indexing for faster queries
 logSchema.index({ userId: 1, timestamp: -1 });
 
 module.exports = mongoose.model("Log", logSchema);

@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use('/api', logRoutes);
 
-connectDB();        // Connect MongoDB
-consumeLogs();      // Start Kafka consumer
+connectDB();      
+consumeLogs();      
 
 module.exports = app;

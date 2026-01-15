@@ -30,7 +30,6 @@ const getAll = async ({ page = 1, limit = 10, filter = {} }) => {
     .skip(skip)
     .limit(limit);
 
-  // 3️⃣ نحسب pagination
   const totalPages = Math.ceil(totalItems / limit);
 
   return {

@@ -1,4 +1,4 @@
-// مجرد factory function لإنشاء log
+//  factory function  
 const createLog = ({ userId, action, timestamp = new Date() }) => ({
   userId,
   action,

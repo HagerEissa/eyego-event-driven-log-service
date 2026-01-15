@@ -1,4 +1,3 @@
-// مجرد واجهة للدوال المطلوبة
 const save = async (log) => {
   throw new Error('Method not implemented');
 };
